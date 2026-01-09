@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Giỏ Hàng - MLB Korea Clone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🛒 GIỎ HÀNG</h1>
+  </header>
+
+  <main class="cart-container">
+    <div class="cart-list">
+      <label><input type="checkbox" id="selectAll"> Chọn tất cả</label>
+
+      <div class="cart-item">
+        <input type="checkbox" class="item-checkbox" checked>
+        <img src="https://via.placeholder.com/80" alt="Basic Letter Mega">
+        <div class="details">
+          <h3>MLB - Áo thun unisex Basic Letter Mega</h3>
+          <p>Size: M | Mã: 3ATSB0753</p>
+          <p class="price">1,690,000₫</p>
+        </div>
+      </div>
+
+      <div class="cart-item">
+        <input type="checkbox" class="item-checkbox" checked>
+        <img src="https://via.placeholder.com/80" alt="Denim Like Monogram Big Lux">
+        <div class="details">
+          <h3>MLB - Áo thun unisex Denim Like Monogram Big Lux</h3>
+          <p>Size: M | Mã: 3ATSM0643</p>
+          <p class="price">2,050,000₫</p>
+        </div>
+      </div>
+
+      <button onclick="continueShopping()">Tiếp tục mua hàng</button>
+    </div>
+
+    <div class="order-summary">
+      <h2>THÔNG TIN ĐƠN HÀNG</h2>
+      <p>Tạm tính: <span id="subtotal">0₫</span></p>
+      <p>Phí vận chuyển: <span>Miễn phí</span></p>
+      <hr>
+      <p><strong>Tổng đơn hàng: <span id="total">0₫</span></strong></p>
+      <button onclick="checkout()">THANH TOÁN</button>
+
+      <div class="note">
+        <textarea placeholder="Nhập ghi chú đơn hàng"></textarea>
+        <label><input type="checkbox"> Xuất hóa đơn công ty</label>
+      </div>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

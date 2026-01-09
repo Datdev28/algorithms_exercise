@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+function isPalindrome(string){
+  return resolve(string, 0 ,string.length - 1)
+}
+function resolve(string, index, n){
+  if(n <= index){
+    return true
+  }else {
+    if(string[index] === string[n]){
+      return resolve(string, index + 1, n - 1)
+    }else {
+      return false
+    }
+  }
+}
+console.log(isPalindrome("racecar"))
+</script>
+</body>
+</html>

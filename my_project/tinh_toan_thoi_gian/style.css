@@ -1,0 +1,16 @@
+.container {
+  display: flex;
+}
+input {
+  font-size: 20px;
+  margin-right: 10px;
+  width: 50px;
+}
+.request-button {
+  margin-top: 10px;
+}
+.ouput {
+  margin-top: 30px;
+  height: 30px;
+  width: 100px;
+}

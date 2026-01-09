@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+let arr = [-5, 2, 10, 4, 6];
+function findindex(t){
+  for(let i = 0; i < arr.length; i++){
+  if(arr[i] === t){
+    return i
+  }
+}
+  return -1
+}
+console.log(findindex(10))
+//big O(n)
+</script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+//  function climbing(n){
+//   let arrWay = [1, 2];
+//   for(let i = 2; i < n; i++){
+//     arrWay[i] = arrWay[i - 1] + arrWay[i - 2]
+//   }
+//   console.log(arrWay.length)
+//   return arrWay[n - 1];
+//  }
+ // đệ quy không tối ưu cho cách này
+ function climbing(n) {
+  let arrWay = [1, 2];
+  return resolve(n, arrWay);
+}
+
+function resolve(n, arrWay) {
+  if (n <= 2) {
+    return arrWay[n - 1];
+  }
+  arrWay[n] = resolve(n - 1, arrWay) + resolve(n - 2, arrWay);
+  return arrWay[n];
+}
+
+console.log(climbing(6)); // Kết quả mong đợi: 3
+</script>
+</body>
+</html>

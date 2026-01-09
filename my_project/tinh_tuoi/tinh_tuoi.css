@@ -1,0 +1,23 @@
+.container {
+  margin-left: 860px;
+}
+.title {
+  font-size: 50px;
+  margin-left: -50px;
+}
+.container-input {
+  display: flex;
+  align-items: center;
+  margin-top: -50px;
+  margin-left: -200px;
+}
+.request {
+  font-size: 22px;
+  margin-right: 30px;
+}
+.date-input {
+  font-size: 22px;
+}
+.calculateAge-button {
+  font-size: 22px;
+}

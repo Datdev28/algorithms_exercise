@@ -1,0 +1,63 @@
+.container {
+  width: 470px;
+  height: 260px;
+  border: 1px solid rgb(214, 212, 212);
+  border-radius: 2px;
+  margin: 200px;
+  margin-left: 700px;
+  box-shadow: 1px 1px 10px black;
+}
+.title {
+  margin-left: 190px;
+  font-size: 22px;
+  font-weight: 520;
+  margin-top: 0px;
+  font-family: arial;
+}
+.suggest {
+  font-size: 20px;
+}
+.input {
+  margin-left: 20px;
+  margin-top: -18px;
+}
+.account, .password {
+  width: 400px;
+  height: 30px;
+  margin-top: -12px;
+  border: 2px solid rgb(214, 212, 212);
+  border-radius: 5px;
+  font-size: 16px;
+}
+.operation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2px;
+  align-items: center;
+}
+.login {
+  width: 85px;
+  height: 35px;
+  background-color: rgb(115, 31, 194);
+  color: white;
+  border: none;
+  font-size: 20px;
+  border-radius: 3px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.register {
+  margin-right: 22px;
+  font-size: 20px;
+  color: rgb(149, 117, 178);
+}
+.input-with-icon {
+  position: relative;
+}
+.input-with-icon i {
+  position: absolute;
+  margin-left: 10px;
+}
+.input-with-icon input {
+  padding-left: 30px;
+}

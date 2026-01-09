@@ -1,0 +1,44 @@
+.container-leg {
+  width: 100px;
+  height: 300px;
+  border: 1px solid black;
+  margin-left: 900px;
+  margin-top: 50px;
+  background-color: black;
+}
+.column {
+  width: 30px;
+  height: 500px;
+  border: solid 1px black;
+  margin-left: 935px;
+  background-color: black;
+}
+.leg-red, .leg-yellow, .leg-green {
+  width: 80px;
+  height: 80px;
+  margin-left: 10px;
+  margin-top: 13px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+}
+.on-red{
+  background-color: red;
+  box-shadow: 2px 2px 30px rgb(255, 29, 29);
+}
+.on-yellow {
+  background-color: yellow;
+  box-shadow: 2px 2px 30px rgb(211, 233, 14);
+
+}
+.on-green {
+  background-color: green;
+  box-shadow: 2px 2px 30px rgb(43, 254, 31);
+}
+.js-second-red, .js-second-yellow, .js-second-green{
+  font-family: arial;
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(0, 0, 0);
+  margin-left: 28px;
+}

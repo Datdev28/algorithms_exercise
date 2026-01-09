@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+function minSteps(n){
+  return resolve(n, 0)
+}
+function resolve(n, count){
+  if(n === 1){
+    return count
+  }else {
+    if(n % 2 === 0){
+      return resolve(n / 2, count + 1)
+    }else {
+      return resolve(n - 1, count + 1)
+    }
+  }
+}
+console.log(minSteps(15)); // Kết quả: 4 (10 -> 5 -> 4 -> 2 -> 1)
+</script>
+</body>
+</html>

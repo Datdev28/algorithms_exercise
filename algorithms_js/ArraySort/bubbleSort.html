@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+  function bubbleSort(arr){
+    let temp;
+    for(let i = 0; i < arr.length; i++){
+      for(let j = 0; j < arr.length - 1; j++){
+        if(arr[j] > arr[j + 1]){
+          temp = arr[j];
+          arr[j] = arr[j + 1]
+          arr[j + 1] = temp;
+        }
+        console.log("a");
+      }
+      // for(let j = i + 1; j < arr.length; j++){
+      //   if(arr[i] > arr[j]){
+      //     temp = arr[i];
+      //     arr[i] = arr[j]
+      //     arr[j] = temp;
+      //   }
+      //   console.log("a");
+      // }
+      // cách này hiệu suất nhanh hơn nhưng không phải bubble sort 
+    }
+    return arr;
+  }
+  let arr = [8, 20, -2, 4, -6, -3]
+  console.log(bubbleSort(arr));
+</script>
+</body>
+
+</html>

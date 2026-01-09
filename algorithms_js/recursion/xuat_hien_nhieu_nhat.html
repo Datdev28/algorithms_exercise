@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+function findMostFrequent(arr){
+  return resolve(arr, 0, 0, 1)
+}
+function resolve(arr, n, index, count){
+  if(n >= arr.length){
+    console.log(index);
+    return arr[index]
+  }else {
+    let newCount = 0;
+    for(let i = 0; i < arr.length; i++){
+     if(arr[n] === arr[i]){
+      newCount += 1;
+     }
+    }
+    if(newCount >= count){
+      count = newCount;
+      index = n;
+      return resolve(arr, n + 1, index, count);
+    }
+  }
+  return resolve(arr, n + 1, index, count)
+}
+console.log(findMostFrequent([1, 2, 2, 3, 3, 3, 4, 9, 1, 2, 2, 2, 3, 6, 12, 12, 12, 3, 3, 3, ,3]));
+</script>
+</body>
+</html>

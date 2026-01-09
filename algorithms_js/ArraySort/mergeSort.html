@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+<script>
+function mergeSort(arr){
+  if(arr.length < 2){
+    return arr
+  }
+  let middle = Math.floor(arr.length / 2);
+  let leftArr = arr.slice(0, middle);
+  let rightArr = arr.slice(middle);
+  return merge(mergeSort(leftArr), mergeSort(rightArr));
+}
+function merge(leftArr, rightArr){
+  let arrSorted = [];
+  while(leftArr.length && rightArr.length){
+    if(leftArr[0] < rightArr[0]){
+      arrSorted.push(leftArr.shift());
+    }else {
+      arrSorted.push(rightArr.shift())
+    }
+  }
+  return [...arrSorted, ...leftArr, ...rightArr];
+}
+const arr = [-6, -2, 4, 8, 20];
+console.log(mergeSort(arr)); // [-6, -2, 4, 8, 20]
+</script>
+</body>
+
+</html>

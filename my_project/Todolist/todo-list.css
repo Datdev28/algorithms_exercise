@@ -1,0 +1,32 @@
+body {
+  font-family: arial;
+}
+.container, .container-ouput {
+  display: grid;
+  grid-template-columns: 200px 150px 100px 100px;
+  margin-top: 20px;
+  column-gap: 10px;
+  align-items: center;
+}
+input {
+  font-size: 20px;
+  font-family: arial;
+}
+.add {
+  font-size: 20px;
+}
+.container-ouput{
+  gap: 10px;
+  font-size: 20px;
+  align-items: stretch;
+}
+.delete {
+  background-color: red;
+  color: white;
+  border: none;
+}
+.update {
+  background-color: rgb(97, 101, 220);
+  color: white;
+  border: none;
+}

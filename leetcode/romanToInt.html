@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /**
+    * @param {string} s
+    * @return {number}
+    */
+    const romanToInt = function (s) {
+     const obj = {
+      I: 1,
+      V: 5,
+      X: 10,
+      L: 50,
+      C: 100,
+      D: 500,
+      M: 1000
+     }
+     let sum = 0;
+     let count = 0;
+     const map = new Map(Object.entries(obj));
+     console.log(map);
+     for(let i = 0; i < s.length; i++){
+      if(map.has(s[i]) && sum < 4000){
+        if(map.get(s[i - 1]) * 5 === map.get(s[i]) || map.get(s[i - 1]) * 10 === map.get(s[i])){
+          sum += map.get(s[i]) - map.get(s[i - 1]) * 2;
+        }else{
+          sum += map.get(s[i]);
+        }
+      }else {
+        return "Lỗi"
+      }
+     }
+     return sum;
+    };
+    console.log(romanToInt("MMM"));
+    console.log(romanToInt("MMMMM"));
+    console.log(romanToInt("MMMLI"));
+  </script>
+</body>
+
+</html>

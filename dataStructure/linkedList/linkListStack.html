@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    class Node {
+      constructor(value) {
+        this.value = value;
+        this.next = null;
+      }
+    }
+    class linkedList {
+      constructor() {
+        this.head = null;
+        this.size = 0;
+        this.tail = null;
+      }
+      empty() {
+        return this.size === 0;
+      }
+      getSize() {
+        return this.size;
+      }
+      prepend(value) {
+        const newNode = new Node(value);
+        if (this.empty()) {
+          this.head = newNode;
+          this.tail = newNode;
+        } else {
+          newNode.next = this.head;
+          this.head = newNode;
+        }
+
+        this.size++;
+      }
+      append(value) {
+        const newNode = new Node(value);
+        if (this.empty()) {
+          this.head = newNode;
+          this.tail = newNode;
+        } else {
+          this.tail.next = newNode;
+          this.tail = newNode;
+        }
+        this.size++;
+      }
+      removeFromFront() {
+        if (this.empty()) {
+          return null;
+        }
+        let current = this.head;
+        current = current.next;
+        this.head.next = null;
+        this.head = current;
+        this.size--;
+      }
+      removeFromEnd() {
+        if (this.empty()) {
+          return null;
+        }
+        if (this.size === 1) {
+          this.head = null;
+          this.tail = null;
+        } else {
+          let current = this.head;
+          while (current.next !== this.tail) {
+            current = current.next;
+          }
+          current.next = null;
+          this.tail = current;
+        }
+        this.size--;
+      }
+
+      printf() {
+        if (this.empty()) return '';
+        let current = this.head;
+        let list = '';
+        while (current) {
+          list += ` ${current.value}`
+          current = current.next;
+        }
+        console.log(list);
+      }
+    }
+  </script>
+</body>
+
+</html>

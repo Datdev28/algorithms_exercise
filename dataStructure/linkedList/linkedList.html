@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+<script>
+  class Node {
+    constructor(value){
+      this.value = value;
+      this.next = null;
+    }
+  }
+  class linkedList {
+    constructor(){
+      this.head = null;
+      this.size = 0;
+    }
+    empty(){
+      return this.size === 0;
+    }
+    prepend(value){
+      const newNode = new Node(value);
+      if(this.empty()){
+        this.head = newNode;
+      }else {
+        newNode.next = this.head;
+        this.head = newNode;
+      }
+      this.size++;
+    }
+    afterPend(value){
+      const newNode = new Node(value);
+      if(this.empty()){
+        this.head = newNode;
+      }else {
+        let current = this.head;
+        while(current.next !== null){
+         current = current.next; 
+        }
+        current.next = newNode;
+      }
+      this.size++;
+    }
+    insert(value, localtion){
+      if(this.empty()){
+        return console.log('List trống');
+      }
+      if(localtion < 0 || localtion >= this.size){
+        return console.log('location không hợp lệ')
+      }
+      if(localtion === 0){
+        this.prepend(value);
+      }else {
+        const newNode = new Node(value);
+        let current = this.head;
+        for(let i = 1; i < localtion; i++){
+          current = current.next;
+        }
+         newNode.next = current.next;
+         current.next = newNode;
+         this.size++;
+      }
+    }
+    remove(location){
+     if(location < 0 || location >= this.size) return console.log("location không hợp lệ");
+     if(this.empty()){
+       return console.log("k hợp lệ");
+     }
+     if(location === 0){
+      let current = this.head;
+      this.head = current.next;
+     }else {
+      let current = this.head;
+      for(let i = 1; i < location; i++){
+        current = current.next;
+      }
+      let nodeRemove = current.next;
+      current.next = nodeRemove.next;
+     }
+      this.size--;
+    }
+    removeByValue(value){
+      if(this.empty()) return console.log("List is empty");
+      if(this.head.value === value){
+        this.head = this.head.next;
+        this.size--;
+        return value;
+      }
+      let current = this.head;
+      let prev = this.head;
+      for(let i = 0; i < this.size; i++){
+        if(i >= 1){
+          prev = prev.next;
+        }
+        current = current.next;
+        if(current.value === value){
+         prev.next = current.next;
+         return value;
+        }
+      }
+      this.size--;
+    }
+    reverse(){
+     if(this.empty()) return console.log("list is empty");
+     if(this.size === 1) return this.head.value;
+     let current = this.head;
+     let prev = null;
+     while(current){
+      let next = current.next;
+      current.next = prev;
+      prev = current;
+      current = next;
+     }
+     this.head = prev;
+    }
+    print(){
+      if(this.empty()) return console.log("list is empty")
+      let current = this.head;
+      while(current){
+        console.log(current.value);
+        current = current.next;
+      }
+    }
+
+  }
+  const a = new linkedList();
+  a.afterPend(6);
+  a.afterPend(6);
+  a.afterPend(6);
+  a.afterPend(1);
+  a.afterPend(2);
+  a.afterPend(6);
+  a.afterPend(6);
+  a.afterPend(3);
+  a.afterPend(6);
+  a.afterPend(4);
+  a.delete(6);
+a.print();
+</script>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+.title {
+  font-size: 22px;
+  font-family: arial;
+  font-weight: bold;
+  margin-left: 100px;
+}
+.container, .container-ouput {
+  display: grid;
+  grid-template-columns: 200px 150px 100px 100px;
+  gap: 10px;
+}
+.container-ouput {
+  margin-top: 10px;
+}

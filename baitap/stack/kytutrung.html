@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+   function filterChar(string){
+    if(string.length < 2){
+      return string
+    }
+     const stack = [];
+     for(let char of string){
+      if(char === stack[stack.length - 1]){
+        stack.pop();
+      }else {
+        stack.push(char);
+      }
+     }
+     return stack;
+   }
+  console.log(filterChar("abbaca"));
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 250px;
+  padding-left: 700px;
+}
+.container {
+  width: 400px;
+  height: 300px;
+  background-color: violet;
+  border: solid 1px black;
+  border-radius: 4px;
+  border: none;
+  box-shadow: 1px 1px 20px black;
+}
+.title {
+  margin-left: 120px;
+  font-weight: bold;
+  padding-top: 30px;
+  font-size: 20px;
+}
+.input-form {
+   display: flex;
+   margin-top: 30px;
+   align-items: center;
+}
+.input-form p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.number-input {
+  height: 40px;
+  width: 50px;
+  margin-left: 20px;
+  font-size: 20px;
+}
+.guess-button {
+  background-color: rgb(6, 6, 42);
+  font-size: 30px;
+  margin-top: 30px;
+  margin-left: 150px;
+  border: 1px solid white;
+  border-radius: 2px;
+  color: white;
+  cursor: pointer;
+}
+.continue {
+  font-size: 20px;
+  cursor: pointer;
+}

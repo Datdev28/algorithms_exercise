@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    //big o(N2)
+//  const twoSum = function(nums, target) {
+//   let resolve = [];
+//     for(let i = 0; i < nums.length - 1; i++){
+//         for(let j = i + 1; j < nums.length; j++){
+//             if(nums[i] + nums[j] === target){
+//                 resolve.push(i, j);
+//                return resolve;
+//             }
+//         }
+//     }
+//     return -1;
+//   }
+const twoSum = function(nums, target){
+  let map = new Map();
+  for(let i = 0; i < nums.length; i++){ 
+   let element = target - nums[i];
+   if(map.has(element)){
+    return [map.get(element), i]
+   }
+   map.set(nums[i], i)
+  }
+  return -1;
+}
+  console.log(twoSum([3,2,4], 6))
+  
+</script>
+</body>
+
+</html>

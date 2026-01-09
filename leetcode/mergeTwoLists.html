@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /**
+     * Definition for singly-linked list.
+     * function ListNode(val, next) {
+     *     this.val = (val===undefined ? 0 : val)
+     *     this.next = (next===undefined ? null : next)
+     * }
+     */
+    /**
+     * @param {ListNode} list1
+     * @param {ListNode} list2
+     * @return {ListNode}
+     */
+    class Node {
+      constructor(value) {
+        this.value = value;
+        this.next = null
+      }
+    }
+
+    function arrayToList(arr) {
+      let head = null;
+      let current = null;
+      for (let item of arr) {
+        const newNode = new Node(item);
+        if (!head) {
+          head = newNode;
+          current = newNode;
+        } else {
+          current.next = newNode;
+          current = newNode;
+        }
+      }
+      return head;
+    }
+    var mergeTwoLists = function (list1, list2) {
+      let current1 = list1;
+      let current2 = list2;
+      let prev1 = null;
+      while(list2){
+        if(!current1){
+          prev1.next = list2;
+          break;
+        }
+        if(list2.value > current1.value){
+          prev1 = current1;
+          current1 = current1.next;
+        }else {
+          prev1.next = current2;
+          prev1 = current2;
+          list2 = current2.next;
+          current2.next = current1;
+        }
+      }
+      return list1
+    };
+   console.log(mergeTwoLists(arrayToList([1, 2, 3]), arrayToList([2, 4, 5])))
+  </script>
+</body>
+
+</html>

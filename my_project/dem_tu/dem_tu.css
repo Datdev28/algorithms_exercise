@@ -1,0 +1,8 @@
+.container, .count-from {
+  margin-left: 800px;
+  margin-top: 50px;
+}
+.count-from {
+  margin-left: 960px;
+  font-size: 22px;
+}
